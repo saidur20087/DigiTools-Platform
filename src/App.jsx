@@ -1,19 +1,42 @@
+// src/App.jsx
+import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-
-import './App.css'
+import Navbar from './components/Navbar/Navbar';
+import Banner from './components/Banner/Banner';
+import Stats from './components/Stats/Stats';
+import ToggleSection from './components/ToggleSection/ToggleSection';
+import ProductSection from './components/ProductSection/ProductSection';
+import Cart from './components/Cart/Cart';
+import StepsSection from './components/StepsSection/StepsSection';
+import PricingSection from './components/PricingSection/PricingSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
-  
+  const [activeTab, setActiveTab] = useState('product');
+  const [cart, setCart] = useState([]);
 
   return (
     <>
-    <h1 className='font-bold text-green-500 text-center text-4xl'>My Assignment 06</h1>
-    <h1 className='font-bold text-green-500 text-center text-4xl'>Welcome my page</h1>
+      <Navbar cartCount={cart.length} />
+      <Banner />
+      <Stats />
+      <ToggleSection activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      
+      {activeTab === 'product' ? (
+        <ProductSection cart={cart} setCart={setCart} />
+      ) : (
+        <Cart cart={cart} setCart={setCart} />
+      )}
+
+      <StepsSection />
+      <PricingSection />
+      <Footer />
+
+      <ToastContainer position="top-right" autoClose={2500} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
