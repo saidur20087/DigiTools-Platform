@@ -1,3 +1,5 @@
+import { FaCheck } from "react-icons/fa6";
+
 
 const PricingSection = () => {
   return (
@@ -11,40 +13,53 @@ const PricingSection = () => {
             <h3 className="text-xl font-semibold">Starter</h3>
             <div className="text-5xl font-bold my-6">$0<span className="text-lg font-normal text-gray-500">/month</span></div>
             <ul className="space-y-3 text-left">
-              <li>✓ 5 Tools Access</li>
-              <li>✓ Basic Features</li>
-              <li>✓ Community Support</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Basic Features</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Community Support</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> 5 Tools Access</li>
             </ul>
-            <button className="btn btn-outline w-full mt-10">Get Started Free</button>
+            <button className="btn btn-primary rounded-full w-full mt-10">Get Started Free</button>
           </div>
 
-          <div className="border-2 border-purple-600 rounded-3xl p-8 relative scale-105 shadow-xl">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1 rounded-full text-sm font-medium">MOST POPULAR</div>
+          <div className=" text-white bg-[#4F39F6] rounded-3xl p-8 relative scale-105 shadow-xl">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-200 text-orange-400 px-6 py-1 rounded-full font-normal w-40">Most Popular</div>
             <h3 className="text-xl font-semibold">Pro</h3>
             <div className="text-5xl font-bold my-6">$19<span className="text-lg font-normal text-gray-500">/month</span></div>
             <ul className="space-y-3 text-left">
-              <li>✓ Unlimited Tools</li>
-              <li>✓ All Premium Features</li>
-              <li>✓ Priority Support</li>
-              <li>✓ Early Access</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Unlimited Tools</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck />All Premium Features</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck />Priority Support</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck />Early Access</li>
             </ul>
-            <button className="btn btn-primary w-full mt-10">Go Pro</button>
+            <button className="btn bg-white text-purple-500 rounded-full w-full mt-10">Start Pro Trial</button>
           </div>
 
           <div className="border border-gray-200 rounded-3xl p-8 hover:border-purple-400 transition-all">
             <h3 className="text-xl font-semibold">Enterprise</h3>
             <div className="text-5xl font-bold my-6">$49<span className="text-lg font-normal text-gray-500">/month</span></div>
             <ul className="space-y-3 text-left">
-              <li>✓ Everything in Pro</li>
-              <li>✓ Team Accounts</li>
-              <li>✓ Custom Tools</li>
-              <li>✓ Dedicated Manager</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Everything in Pro</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Team Accounts</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Custom Tools</li>
+              <li className="flex justify-center items-center gap-2"><FaCheck /> Dedicated Manager</li>
             </ul>
-            <button className="btn btn-outline w-full mt-10">Contact Sales</button>
+            <button className="btn btn-primary rounded-full w-full mt-10">Contact Sales</button>
           </div>
         </div>
       </div>
+
+      <div className="w-11/12 mx-auto bg-[#4F39F6] text-white py-20 space-y-12 mt-16 text-center ">
+        <h2 className="font-bold text-4xl">Ready to Transform Your Workflow?</h2>
+        <p>Join thousands of professionals who are already using Digitools to work smarter <br />Start your free trial today.</p>
+
+        <div className="flex gap-4 justify-center">
+          <button className="btn text-purple-600 rounded-4xl hover:bg-red-300   ">Explore Products</button>
+          <button className=" w-28 border rounded-4xl text-white hover:bg-white hover:text-purple-700">
+             View Pricing
+          </button>
+        </div>
+      </div>
     </div>
+
   );
 };
 

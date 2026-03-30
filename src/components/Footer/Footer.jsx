@@ -1,14 +1,11 @@
-// src/components/Footer.jsx
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="bg-gray-900  text-gray-300 py-16">
+      <div className="max-w-11/12 mx-auto ">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-9 h-9 bg-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">D</span>
-              </div>
               <span className="text-2xl font-bold text-white">DigiTools</span>
             </div>
             <p className="text-sm">Making digital productivity simple and powerful with AI.</p>

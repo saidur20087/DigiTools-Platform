@@ -6,7 +6,7 @@ import bannerImage from '../../assets/banner.png';
 const Banner = () => {
     return (
         <div id="home" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-11/12 mx-auto px-4 grid md:grid-cols-2 gap-30 items-center">
                 <div className="space-y-16">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                         Supercharge Your Digital Workflow

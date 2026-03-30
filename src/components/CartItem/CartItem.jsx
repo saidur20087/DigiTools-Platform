@@ -1,4 +1,4 @@
-// src/components/CartItem/CartItem.jsx
+
 const CartItem = ({ item, onRemove }) => {
   return (
     <div className="flex gap-6 bg-base-100 p-6 rounded-2xl shadow-sm border">

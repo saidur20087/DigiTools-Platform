@@ -1,4 +1,4 @@
-// src/components/Stats.jsx
+
 const Stats = () => {
   return (
     <div className="w-11/12 mx-auto py-12 px-12 rounded-2xl bg-[#4F39F6] ">

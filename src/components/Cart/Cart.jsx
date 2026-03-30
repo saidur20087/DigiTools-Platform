@@ -1,5 +1,6 @@
 
 import { toast } from 'react-toastify';
+import { BsCart3 } from "react-icons/bs";
 
 import CartItem from '../CartItem/CartItem';
 
@@ -13,7 +14,7 @@ const Cart = ({ cart, setCart }) => {
 
   const proceedToCheckout = () => {
     setCart([]);
-    toast.success("✅ Checkout Successful! Thank you for your purchase.", {
+    toast.success("Checkout Successful!", {
       position: "top-center",
       autoClose: 3000,
     });
@@ -25,19 +26,13 @@ const Cart = ({ cart, setCart }) => {
         <div className="text-7xl mb-6">🛒</div>
         <h2 className="text-3xl font-semibold mb-3">Your Cart is Empty</h2>
         <p className="text-gray-500 mb-8">No products added yet.</p>
-        <button 
-          onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
-          className="btn btn-primary btn-lg"
-        >
-          Browse Products
-        </button>
       </div>
     );
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold mb-8">🛒 Your Cart ({cart.length})</h2>
+      <h2 className="text-4xl font-bold mb-8"><BsCart3 />Your Cart ({cart.length})</h2>
 
       <div className="space-y-6">
         {cart.map((item) => (
@@ -50,9 +45,9 @@ const Cart = ({ cart, setCart }) => {
           <span>Total Amount:</span>
           <span className="text-purple-600">${totalPrice}</span>
         </div>
-        <button 
+        <button
           onClick={proceedToCheckout}
-          className="btn btn-success btn-block text-lg py-7"
+          className="btn btn-primary w-full rounded-4xl text-lg py-4"
         >
           Proceed to Checkout
         </button>

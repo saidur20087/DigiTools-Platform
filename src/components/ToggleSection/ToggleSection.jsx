@@ -1,4 +1,4 @@
-// src/components/ToggleSection/ToggleSection.jsx
+
 const ToggleSection = ({ activeTab, setActiveTab, cartCount = 0 }) => {
   return (
     <div className="my-12 px-4">
@@ -11,7 +11,7 @@ const ToggleSection = ({ activeTab, setActiveTab, cartCount = 0 }) => {
 
       <div className="btn-group flex justify-center">
 
-            {/* Browse Products Button */}
+          
         <button
           onClick={() => setActiveTab('product')}
           className={`btn btn-lg rounded-full ${activeTab === 'product'
@@ -21,8 +21,7 @@ const ToggleSection = ({ activeTab, setActiveTab, cartCount = 0 }) => {
           Products
         </button>
 
-        {/* My Cart Button - Updated (তোমার চাওয়া অনুযায়ী) */}
-        <button
+            <button
           onClick={() => setActiveTab('cart')}
           className={`btn btn-lg rounded-full flex items-center ${activeTab === 'cart'
             ? 'btn-primary'

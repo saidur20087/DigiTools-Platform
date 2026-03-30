@@ -9,7 +9,8 @@ const StepsSection = () => {
   return (
     <div id="steps" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">Get Started in 3 Simple Steps</h2>
+        <h2 className="text-4xl font-bold text-center ">Get Started in 3 Steps</h2>
+        <p className="text-center text-gray-400 mt-3 mb-16">Start using premium digital tools in minutes, not hours.</p>
         
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
