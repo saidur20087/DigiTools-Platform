@@ -22,7 +22,11 @@ function App() {
       <Navbar cartCount={cart.length} />
       <Banner />
       <Stats />
-      <ToggleSection activeTab={activeTab} setActiveTab={setActiveTab} />
+      <ToggleSection
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        cartCount={cart.length} 
+      />
 
       {activeTab === 'product' ? (
         <ProductSection cart={cart} setCart={setCart} />

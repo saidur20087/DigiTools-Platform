@@ -32,9 +32,10 @@ const Navbar = ({ cartCount = 0 }) => {
                             <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full ring-2 ring-white">
                                 {cartCount}
                             </div>
+                            
                         )}
                     </div>
-
+                    
                     <button className="px-6">Login</button>
                     <button className="btn btn-primary rounded-4xl px-4">Get Started</button>
                 </div>

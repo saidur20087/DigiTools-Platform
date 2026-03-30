@@ -1,9 +1,18 @@
-// src/components/ProductCard/ProductCard.jsx
+
 import { toast } from 'react-toastify';
 
-const ProductCard = ({ product, onAddToCart }) => {
+import { useState } from 'react';
+
+const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
+  
+  const [isAdded, setIsAdded] = useState(isAlreadyInCart);
+
   const handleAddToCart = () => {
+    if (isAdded) return; 
+
     onAddToCart(product);
+    setIsAdded(true);
+
     toast.success(`${product.name} added to cart!`, {
       position: "top-right",
       autoClose: 2000,
@@ -11,7 +20,7 @@ const ProductCard = ({ product, onAddToCart }) => {
   };
 
   return (
-    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all border border-purple-200">
+    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all border border-purple-200 h-full">
       <figure className="px-6 pt-6">
         <img
           src={product.icon}
@@ -53,12 +62,17 @@ const ProductCard = ({ product, onAddToCart }) => {
           ))}
         </ul>
 
-        <div className="card-actions mt-6">
+        <div className="card-actions mt-auto pt-6">
           <button
             onClick={handleAddToCart}
-            className="btn btn-primary btn-block"
+            disabled={isAdded}
+            className={`btn btn-block text-base font-medium ${
+              isAdded 
+                ? 'btn-success cursor-not-allowed' 
+                : 'btn-primary hover:btn-primary'
+            }`}
           >
-            Add to Cart
+            {isAdded ? '✓ Added to Cart' : 'Add to Cart'}
           </button>
         </div>
       </div>

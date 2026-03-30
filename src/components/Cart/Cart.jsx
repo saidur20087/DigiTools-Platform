@@ -1,5 +1,6 @@
-// src/components/Cart/Cart.jsx
+
 import { toast } from 'react-toastify';
+
 import CartItem from '../CartItem/CartItem';
 
 const Cart = ({ cart, setCart }) => {

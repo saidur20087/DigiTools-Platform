@@ -1,9 +1,9 @@
 // src/components/Stats.jsx
 const Stats = () => {
   return (
-    <div className="py-12 bg-purple-800 ">
+    <div className="w-11/12 mx-auto py-12 px-12 rounded-2xl bg-[#4F39F6] ">
       <div className="max-w-[70%] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
           <div>
             <div className="text-4xl font-bold text-white">50K+</div>
             <div className="text-white mt-2">Active Users</div>

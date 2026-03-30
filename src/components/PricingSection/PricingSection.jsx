@@ -1,4 +1,4 @@
-// src/components/PricingSection.jsx
+
 const PricingSection = () => {
   return (
     <div id="pricing" className="py-20 bg-white">

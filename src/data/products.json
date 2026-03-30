@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "AI Resume Builder",
+    "name": "AI Writing Pro",
     "description": "Create ATS-optimized professional resumes in minutes using advanced AI.",
     "price": 29,
     "period": "one-time",
@@ -97,16 +97,5 @@
     "tagType": "popular",
     "features": ["Skill Gap Analysis", "Roadmap", "Salary Insights"],
     "icon": "https://cdn-icons-png.flaticon.com/512/2991/2991108.png"
-  },
-  {
-    "id": 10,
-    "name": "AI Content Optimizer",
-    "description": "Optimize your LinkedIn posts, blogs for maximum engagement.",
-    "price": 18,
-    "period": "monthly",
-    "tag": "",
-    "tagType": "",
-    "features": ["Engagement Score", "Hashtag Suggestions", "Rewrite"],
-    "icon": "https://cdn-icons-png.flaticon.com/512/3062/3062302.png"
   }
 ]
