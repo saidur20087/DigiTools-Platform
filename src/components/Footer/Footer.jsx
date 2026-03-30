@@ -1,9 +1,9 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900  text-gray-300 py-16">
-      <div className="max-w-11/12 mx-auto ">
-        <div className="grid md:grid-cols-4 gap-10">
+    <div className="bg-gray-900  text-gray-300 py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8 ">
+        <div className="grid grid-cols-1 text-center md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <span className="text-2xl font-bold text-white">DigiTools</span>
@@ -40,10 +40,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-16 pt-8 text-center text-sm">
-          © 2026 DigiTools. All rights reserved. Made with ❤️ in Bangladesh
+          © 2026 DigiTools. All rights reserved. Made with in Bangladesh
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
