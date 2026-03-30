@@ -17,7 +17,7 @@ const Banner = () => {
                         Explore Products
                     </p>
                     <div className="flex gap-4">
-                        <button className="btn btn-primary rounded-4xl hover:bg-red-300   ">Explore Products</button>
+                        <button className="btn btn-primary rounded-4xl hover:bg-gray-400   ">Explore Products</button>
                         <button className="btn rounded-4xl border-purple-600 text-purple-500 hover:bg-white hover:text-purple-700">
                             <CiPlay1 /> Watch Demo
                         </button>
