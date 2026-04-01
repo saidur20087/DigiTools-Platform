@@ -22,7 +22,7 @@ const Navbar = ({ cartCount = 0 }) => {
                     </ul>
                 </div>
 
-                <div className="navbar-end flex items-center gap-4">
+                <div className="navbar-end flex items-center gap-6">
 
                     <div className="relative cursor-pointer group flex">
                         <div className="w-10 h-10 hover:bg-purple-100 rounded-3xl flex items-center justify-center transition-all bg-base-200">
@@ -32,12 +32,12 @@ const Navbar = ({ cartCount = 0 }) => {
                             <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full ring-2 ring-white">
                                 {cartCount}
                             </div>
-
                         )}
-                        <button className="px-6">Login</button>
-                        <button className="btn btn-primary rounded-4xl px-4">Get Started</button>
                     </div>
-
+                        <div className="flex items-center gap-2">
+                        <button className="btn text-normal rounded-full h-9 w-24 ">Login</button>
+                        <button className="btn btn-primary rounded-full px-6 btn-sm">Get Started</button>
+                    </div>
 
                 </div>
             </div>
