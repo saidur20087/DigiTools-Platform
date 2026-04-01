@@ -47,17 +47,7 @@ const PricingSection = () => {
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto bg-[#4F39F6] text-white py-20 space-y-12 mt-16 text-center ">
-        <h2 className="font-bold text-4xl">Ready to Transform Your Workflow?</h2>
-        <p>Join thousands of professionals who are already using Digitools to work smarter <br />Start your free trial today.</p>
-
-        <div className="flex gap-4 justify-center">
-          <button className="btn text-purple-600 rounded-4xl hover:bg-red-300   ">Explore Products</button>
-          <button className=" w-28 border rounded-4xl text-white hover:bg-white hover:text-purple-700">
-             View Pricing
-          </button>
-        </div>
-      </div>
+     
     </div>
 
   );

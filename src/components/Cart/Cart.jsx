@@ -1,6 +1,8 @@
 
 import { toast } from 'react-toastify';
 import { BsCart3 } from "react-icons/bs";
+import { TiShoppingCart } from "react-icons/ti";
+
 
 import CartItem from '../CartItem/CartItem';
 
@@ -23,7 +25,8 @@ const Cart = ({ cart, setCart }) => {
   if (cart.length === 0) {
     return (
       <div className="max-w-4xl mx-auto py-20 text-center">
-        <div className="text-7xl mb-6">🛒</div>
+        <div className="text-7xl mb-4 flex justify-center">
+          <TiShoppingCart /></div>
         <h2 className="text-3xl font-semibold mb-3">Your Cart is Empty</h2>
         <p className="text-gray-500 mb-8">No products added yet.</p>
       </div>

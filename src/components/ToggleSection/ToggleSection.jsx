@@ -9,7 +9,7 @@ const ToggleSection = ({ activeTab, setActiveTab, cartCount = 0 }) => {
      </div>
 
 
-      <div className="btn-group flex justify-center">
+      <div className="btn-group flex justify-center gap-2">
 
           
         <button
@@ -27,8 +27,8 @@ const ToggleSection = ({ activeTab, setActiveTab, cartCount = 0 }) => {
             ? 'btn-primary'
             : 'btn-outline'}`}
         >
-          My Cart
-          <span className="bg-white text-purple-700 px-4 py-1 rounded-full text-sm font-bold">
+          Cart
+          <span className="bg-white text-purple-700 px-2 py-1 rounded-full text-sm font-bold">
             ({cartCount})
           </span>
         </button>

@@ -1,14 +1,16 @@
 
 import { toast } from 'react-toastify';
+import { FaCheck } from "react-icons/fa6";
+
 
 import { useState } from 'react';
 
 const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
-  
+
   const [isAdded, setIsAdded] = useState(isAlreadyInCart);
 
   const handleAddToCart = () => {
-    if (isAdded) return; 
+    if (isAdded) return;
 
     onAddToCart(product);
     setIsAdded(true);
@@ -25,7 +27,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
         <img
           src={product.icon}
           alt={product.name}
-          className="w-20 h-20 object-contain"
+          className="w-12 h-12 object-contain"
         />
       </figure>
 
@@ -33,11 +35,10 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
         <div className="flex justify-between items-start">
           <h2 className="card-title text-lg">{product.name}</h2>
           {product.tag && (
-            <div className={`badge badge-sm ${
-              product.tagType === 'popular' ? 'badge-warning' : 
-              product.tagType === 'new' ? 'badge-info' : 
-              'badge-success'
-            }`}>
+            <div className={`badge badge-sm ${product.tagType === 'popular' ? 'badge-warning' :
+                product.tagType === 'new' ? 'badge-info' :
+                  'badge-success'
+              }`}>
               {product.tag.toUpperCase()}
             </div>
           )}
@@ -57,7 +58,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
         <ul className="mt-4 space-y-1 text-sm">
           {product.features.slice(0, 3).map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-gray-600">
-              <span className="text-green-500">✓</span> {feature}
+              <span className="text-green-500"><FaCheck /></span> {feature}
             </li>
           ))}
         </ul>
@@ -66,13 +67,18 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
           <button
             onClick={handleAddToCart}
             disabled={isAdded}
-            className={`btn btn-block text-base font-medium ${
-              isAdded 
-                ? 'btn-success cursor-not-allowed' 
-                : 'btn-primary hover:btn-primary'
-            }`}
+            className={`btn btn-block text-base font-medium ${isAdded
+                ? 'bg-green-800 cursor-not-allowed text-white' 
+                : 'btn-primary'
+              }`}
           >
-            {isAdded ? '✓ Added to Cart' : 'Add to Cart'}
+            {isAdded ? (
+              <span className="flex items-center justify-center gap-2">
+                <FaCheck /> Added to Cart
+              </span>
+            ) : (
+              'Buy Now'
+            )}
           </button>
         </div>
       </div>
