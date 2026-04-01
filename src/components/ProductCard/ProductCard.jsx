@@ -1,84 +1,70 @@
-
 import { toast } from 'react-toastify';
 import { FaCheck } from "react-icons/fa6";
 
 
-import { useState } from 'react';
-
 const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
-
-  const [isAdded, setIsAdded] = useState(isAlreadyInCart);
-
+  
   const handleAddToCart = () => {
-    if (isAdded) return;
-
+    if (isAlreadyInCart) return;
     onAddToCart(product);
-    setIsAdded(true);
-
-    toast.success(`${product.name} added to cart!`, {
-      position: "top-right",
-      autoClose: 2000,
-    });
+    toast.success(`${product.name} added to cart!`);
   };
 
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all border border-purple-200 h-full">
+      
       <figure className="px-6 pt-6">
-        <img
-          src={product.icon}
-          alt={product.name}
-          className="w-12 h-12 object-contain"
-        />
+        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
+             <img src={product.icon} alt={product.name} className="w-10 h-10 object-contain" />
+        </div>
       </figure>
 
       <div className="card-body">
+        
         <div className="flex justify-between items-start">
-          <h2 className="card-title text-lg">{product.name}</h2>
+          <h2 className="card-title text-xl font-bold">{product.name}</h2>
           {product.tag && (
-            <div className={`badge badge-sm ${product.tagType === 'popular' ? 'badge-warning' :
-                product.tagType === 'new' ? 'badge-info' :
-                  'badge-success'
-              }`}>
+            <div className={`badge font-bold py-3 ${
+                product.tagType === 'popular' ? 'badge-warning text-orange-900' : 'badge-primary'
+            }`}>
               {product.tag.toUpperCase()}
             </div>
           )}
         </div>
 
-        <p className="text-sm text-gray-600 line-clamp-2 mt-2">
-          {product.description}
-        </p>
+        
+        <p className="text-sm text-gray-600 mt-2">{product.description}</p>
 
-        <div className="mt-4">
+        
+        <div className="mt-6">
           <div className="flex items-baseline gap-1">
-            <span className="text-3xl font-bold text-purple-600">${product.price}</span>
-            <span className="text-sm text-gray-500">/{product.period}</span>
+            <span className="text-4xl font-bold text-purple-700">${product.price}</span>
+            <span className="text-gray-500 font-medium">/{product.period}</span>
           </div>
         </div>
 
-        <ul className="mt-4 space-y-1 text-sm">
-          {product.features.slice(0, 3).map((feature, i) => (
-            <li key={i} className="flex items-center gap-2 text-gray-600">
-              <span className="text-green-500"><FaCheck /></span> {feature}
+        
+        <ul className="mt-6 space-y-3">
+          {product.features && product.features.map((feature, index) => (
+            <li key={index} className="flex items-center gap-3 text-sm text-gray-700">
+              <FaCheck className="text-green-500 text-lg" /> 
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
 
-        <div className="card-actions mt-auto pt-6">
+     
+        <div className="card-actions mt-auto pt-8">
           <button
             onClick={handleAddToCart}
-            disabled={isAdded}
-            className={`btn btn-block text-base font-medium ${isAdded
-                ? 'bg-green-800 cursor-not-allowed text-white' 
-                : 'btn-primary'
-              }`}
+            disabled={isAlreadyInCart}
+            className={`btn btn-block text-lg font-bold h-12 rounded-full ${
+              isAlreadyInCart 
+              ? 'bg-purple-100 text-purple-400 border-none' 
+              : 'btn-primary bg-purple-700 hover:bg-purple-800'
+            }`}
           >
-            {isAdded ? (
-              <span className="flex items-center justify-center gap-2">
-                <FaCheck /> Added to Cart
-              </span>
-            ) : (
-              'Buy Now'
-            )}
+            {isAlreadyInCart ? 'Added to Cart' : 'Buy Now'}
           </button>
         </div>
       </div>

@@ -35,7 +35,7 @@ const Navbar = ({ cartCount = 0 }) => {
                         )}
                     </div>
                         <div className="flex items-center gap-2">
-                        <button className="btn text-normal rounded-full h-9 w-24 ">Login</button>
+                        <button className="btn text-normal rounded-full h-10 w-24 ">Login</button>
                         <button className="btn btn-primary rounded-full px-6 btn-sm">Get Started</button>
                     </div>
 
