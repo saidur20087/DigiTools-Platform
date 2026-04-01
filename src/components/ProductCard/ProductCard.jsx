@@ -14,7 +14,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all border border-purple-200 h-full">
       
       <figure className="px-6 pt-6">
-        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
+        <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
              <img src={product.icon} alt={product.name} className="w-10 h-10 object-contain" />
         </div>
       </figure>
@@ -36,7 +36,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
         <p className="text-sm text-gray-600 mt-2">{product.description}</p>
 
         
-        <div className="mt-6">
+        <div className="mt-4">
           <div className="flex items-baseline gap-1">
             <span className="text-4xl font-bold text-purple-700">${product.price}</span>
             <span className="text-gray-500 font-medium">/{product.period}</span>
@@ -44,7 +44,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
         </div>
 
         
-        <ul className="mt-6 space-y-3">
+        <ul className="mt-4 space-y-3">
           {product.features && product.features.map((feature, index) => (
             <li key={index} className="flex items-center gap-3 text-sm text-gray-700">
               <FaCheck className="text-green-500 text-lg" /> 
@@ -58,7 +58,7 @@ const ProductCard = ({ product, onAddToCart, isAlreadyInCart }) => {
           <button
             onClick={handleAddToCart}
             disabled={isAlreadyInCart}
-            className={`btn btn-block text-lg font-bold h-12 rounded-full ${
+            className={`btn btn-block text-lg font-bold h-10 rounded-full ${
               isAlreadyInCart 
               ? 'bg-purple-100 text-purple-400 border-none' 
               : 'btn-primary bg-purple-700 hover:bg-purple-800'
