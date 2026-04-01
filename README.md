@@ -24,4 +24,4 @@ You can view the project locally at:
 
 1. **Clone the repository:**
    ```bash
-   git clone [your-repository-link]
+   git clone [https://github.com/saidur20087/DigiTools-Platform.git]
